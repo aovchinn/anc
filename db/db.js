@@ -4,15 +4,13 @@ var records = [
     {
         id: 1,
         username: 'jack',
-        password: 'secret',
         displayName: 'Jack',
         email: 'jack@example.com',
-        hash: 'ee5770a649fccbde3e448d90591673ca'
+        hash: '5ebe2294ecd0e0f08eab7690d2a6ee69'
     }
     , {
         id: 2,
         username: 'jill',
-        password: 'birthday',
         displayName: 'Jill',
         email: 'jill@example.com',
         hash: ''
@@ -32,11 +30,9 @@ exports.findById = function (id, cb) {
 
 exports.findOne = function (username, cb) {
     process.nextTick(function () {
-        var hash = crypto.createHash('md5');
-        hash.update(username);
         for (var i = 0, len = records.length; i < len; i++) {
             var record = records[i];
-            if (record.hash === hash.digest('hex')) {
+            if (record.email === username) {
                 return cb(null, record);
             }
         }
@@ -44,3 +40,6 @@ exports.findOne = function (username, cb) {
     });
 };
 
+exports.add = function (){
+
+};

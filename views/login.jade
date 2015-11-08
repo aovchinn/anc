@@ -2,7 +2,9 @@ extends layout
 
 block content
     div.col-sm-offset-3.col-sm-5
-        form.form-horizontal(method='POST')
+        each msg in alertMessages
+            div.alert.alert-danger(role='alert')= msg
+        form.sign-in.form-horizontal(method='POST')
             div.form-group
                 label.col-sm-2.control-label(for="inputEmail") Email
                 div.col-sm-10

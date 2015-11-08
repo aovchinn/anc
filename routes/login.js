@@ -6,13 +6,13 @@ var express = require('express');
 var router = express.Router();
 
 router.get('/', function (req, res) {
-    res.render('login', {title: 'Welcome'});
+    res.render('login', {title: 'Welcome', alertMessages: req.flash('error')});
 });
 
 router.post('/', passport.authenticate('local', {
-        successRedirect: '/profile',
-        failureRedirect: '/login'
-    })
-);
+    successRedirect: '/profile',
+    failureRedirect: '/login',
+    failureFlash: true
+}));
 
 module.exports = router;

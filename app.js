@@ -6,7 +6,9 @@ var express = require('express'),
     bodyParser = require('body-parser'),
     passport = require('passport'),
     strategy = require('passport-local').Strategy,
-    session = require('express-session');
+    session = require('express-session'),
+    crypto = require('crypto'),
+    flash = require('connect-flash');
 
 var db = require('./db/db.js');
 
@@ -28,17 +30,22 @@ app.use(cookieParser());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(session({secret: 'keyboard word', resave: false, saveUninitialized: false}));
+app.use(flash());
 
 passport.use(new strategy(function (username, password, done) {
         db.findOne(username, function (err, user) {
+            var alertMessage = 'The login or password is incorrect';
             if (err) {
+                console.log(err);
                 return done(err);
             }
             if (!user) {
-                return done(null, false, {message: 'Incorrect username.'});
+                return done(null, false, {message: alertMessage});
             }
-            if (user.password != password) {
-                return done(null, false, {message: 'Incorrect password.'});
+            var hash = crypto.createHash('md5');
+            hash.update(password);
+            if (user.hash !== hash.digest('hex')) {
+                return done(null, false, {message: alertMessage});
             }
             return done(null, user);
         });
