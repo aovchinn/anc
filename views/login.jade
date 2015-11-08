@@ -1,0 +1,22 @@
+extends layout
+
+block content
+    div.col-sm-offset-3.col-sm-5
+        form.form-horizontal(method='POST')
+            div.form-group
+                label.col-sm-2.control-label(for="inputEmail") Email
+                div.col-sm-10
+                    input.form-control#inputEmail(type="email", name="username", placeholder="Email")
+            div.form-group
+                label.col-sm-2.control-label(for="inputPassword") Password
+                div.col-sm-10
+                    input.form-control#inputPassword(type="password", name="password" placeholder="Password")
+            div.form-group
+                div.col-sm-offset-2.col-sm-10
+                    div.checkbox
+                        label
+                            input(type="checkbox")
+                            |Remember me
+            div.form-group
+                div.col-sm-offset-2.col-sm-10
+                    button.btn.btn-default(type="submit") Sign in
