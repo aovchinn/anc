@@ -1,0 +1,20 @@
+db:
+  image: klaemo/couchdb
+  volumes:
+    - ./couchdb_data:/usr/local/var/lib/couchdb
+anc:
+  build: .
+  command: node bin/www
+  volumes:
+    - .:/opt/app
+  ports:
+    - "3000:3000"
+  links:
+    - db
+cucumber:
+  build: .
+  command: node /opt/node_modules/.bin/cucumber-js
+  volumes:
+    - .:/opt/app
+  links:
+    - anc

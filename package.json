@@ -3,11 +3,19 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "docker:clean": "docker-compose rm -f",
+    "docker:build": "docker-compose build",
+    "build": "npm run docker:clean && npm run docker:build",
+    "rebuild": "npm stop && npm run docker:clean && npm run docker:build",
+    "start": "docker-compose up -d db anc",
+    "stop": "docker-compose stop",
+    "cucumber": "docker-compose run --rm cucumber"
   },
   "dependencies": {
     "bluebird": "^3.0.5",
     "body-parser": "~1.13.2",
+    "chai": "^3.4.1",
     "connect-flash": "^0.1.1",
     "cookie-parser": "~1.3.5",
     "cucumber": "^0.8.1",
@@ -15,6 +23,7 @@
     "express": "~4.13.1",
     "express-session": "^1.12.1",
     "jade": "~1.11.0",
+    "mocha": "^2.3.3",
     "morgan": "~1.6.1",
     "passport": "^0.3.0",
     "passport-hash": "^0.5.0",

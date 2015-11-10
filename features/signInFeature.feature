@@ -17,4 +17,3 @@ Feature: Sign in feature
         And I press 'Sign in' button
         Then I should be redirected to '/login'
         And I should see alert 'The login or password is incorrect'
-

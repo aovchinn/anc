@@ -1,11 +1,11 @@
 const Browser = require('zombie');
-//var Promise = require('bluebird');
-Browser.localhost('localhost', 3000);
+
+var baseUrl = "http://anc:3000"
 
 var World = function World() {
-    this.browser = new Browser;
+    this.browser = new Browser();
 
-    this.visit = (url) => this.browser.visit(url);
+    this.visit = (url) => this.browser.visit(`${baseUrl}${url}`);
 
     this.fill = (label, value) => {
         return this.browser.fill(label, value);
