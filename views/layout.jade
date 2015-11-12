@@ -2,8 +2,18 @@ doctype html
 html
   head
     title= title
-    link(rel='stylesheet', href='/node_modules/materialize-css/dist/css/materialize.css')
+    link(rel='stylesheet', href='/Materialize/dist/css/materialize.css')
     link(rel='stylesheet', href='/stylesheets/style.css')
-    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css')
-  body
-    block content
+    
+body
+  nav
+    .nav-wrapper.teal.lighten-2
+      a.brand-logo(href="/") Ancestry
+  block content
+  footer.page-footer.teal.lighten-2
+    .container
+      .row
+        .col.l6.s12
+          h5.white-text Ancestry
+  script(src='/jquery/dist/jquery.js')
+  script(src='/Materialize/dist/js/materialize.js')

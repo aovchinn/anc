@@ -1,8 +1,25 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  min-height: 100%;
 }
 
-a {
-  color: #00B7FF;
+.row.wrapper {
+  margin-bottom: 0;
+}
+
+a.brand-logo {
+  margin-left: 3%;
+}
+
+form {
+  margin-top: 10%;
+}
+.col.s8.old-tree {
+  padding-left: 0;
+}
+.old-tree > img {
+   width: 100%;
+}
+
+footer.page-footer.teal.lighten-2 {
+  margin-top: 0;
 }

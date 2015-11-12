@@ -1,24 +1,21 @@
 extends layout
 
 block content
-    div.col-sm-offset-3.col-sm-5
-        each msg in alertMessages
-            div.alert.alert-danger(role='alert')= msg
-        form.sign-in.form-horizontal(method='POST')
-            div.form-group
-                label.col-sm-2.control-label(for="inputEmail") Email
-                div.col-sm-10
-                    input.form-control#inputEmail(type="email", name="username", placeholder="Email")
-            div.form-group
-                label.col-sm-2.control-label(for="inputPassword") Password
-                div.col-sm-10
-                    input.form-control#inputPassword(type="password", name="password" placeholder="Password")
-            div.form-group
-                div.col-sm-offset-2.col-sm-10
-                    div.checkbox
-                        label
-                            input(type="checkbox")
-                            |Remember me
-            div.form-group
-                div.col-sm-offset-2.col-sm-10
-                    button.btn.btn-default(type="submit") Sign in
+  .row.wrapper
+    .col.s8.old-tree
+      img(src='/images/roots-of-big-old-tree.jpg')
+    form.col.s4
+      .row
+        .input-field.col.s10.offset-s1
+          input#email(type='email')
+          label(for='email') Email
+      .row
+        .input-field.col.s10.offset-s1
+          input#password(type='password')
+          label(for='password') Password
+      .row
+        .input-field.col.s5.offset-s1
+          .waves-effect.waves-light.btn Submit
+        .input-field.col.s5
+          input#test5(type='checkbox')
+          label(for='test5') Remember me
