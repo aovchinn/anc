@@ -1,0 +1,22 @@
+{
+  "name": "ancestry",
+  "description": "ancestry tree app",
+  "main": "bin/www",
+  "authors": [
+    "aovchinn"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/aovchinn/ancestry",
+  "moduleType": [],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "Materialize": "materialize#~0.97.2"
+  }
+}
