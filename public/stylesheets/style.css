@@ -1,16 +1,10 @@
 body {
-   display: flex;
-   min-height: 100vh;
-   flex-direction: column;
- }
+  min-height: 100%;
+}
 
- main {
-   flex: 1 0 auto;
- }
-
-/*.row.wrapper {
+.row.wrapper {
   margin-bottom: 0;
-}*/
+}
 
 a.brand-logo {
   margin-left: 3%;
@@ -25,7 +19,7 @@ form {
 .old-tree > img {
    width: 100%;
 }
-/*
+
 footer.page-footer.teal.lighten-2 {
   margin-top: 0;
-}*/
+}

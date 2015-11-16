@@ -1,22 +1,21 @@
 extends layout
 
 block content
-	.row.wrapper
-		.col.s8.old-tree
-			img(src='/images/roots-of-big-old-tree.jpg')
-
-		form(method='POST').col.s4
-			.row
-				.input-field.col.s10.offset-s1
-					input#email(name='username', type='email')
-					label(for='email') Email
-			.row
-				.input-field.col.s10.offset-s1
-					input#password(name='password', type='password')
-					label(for='password') Password
-			.row
-				.input-field.col.s5.offset-s1
-					button.waves-effect.waves-light.btn(type='submit') Submit
-				.input-field.col.s5
-					input#test5(type='checkbox')
-					label(for='test5') Remember me
+  .row.wrapper
+    .col.s8.old-tree
+      img(src='/images/roots-of-big-old-tree.jpg')
+    form.col.s4
+      .row
+        .input-field.col.s10.offset-s1
+          input#email(type='email')
+          label(for='email') Email
+      .row
+        .input-field.col.s10.offset-s1
+          input#password(type='password')
+          label(for='password') Password
+      .row
+        .input-field.col.s5.offset-s1
+          .waves-effect.waves-light.btn Submit
+        .input-field.col.s5
+          input#test5(type='checkbox')
+          label(for='test5') Remember me

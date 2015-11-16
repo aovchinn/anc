@@ -1,38 +1,19 @@
 doctype html
 html
-	head
-		title= title
-		link(rel='stylesheet', href='/Materialize/dist/css/materialize.css')
-		link(rel='stylesheet', href='/stylesheets/style.css')
-		link(rel='stylesheet', href="/font-awesome/css/font-awesome.css")
-		script(defer, src='/jquery/dist/jquery.js')
-		script(defer, src='/Materialize/dist/js/materialize.js')
-
-	body
-		header
-			nav.teal.lighten-2
-				.nav-wrapper
-					a.brand-logo(href="/") Ancestry
-		main
-			block content
-
-		footer
-			footer.page-footer.teal.lighten-2
-				.container
-					.row
-						.col.l6.s12
-							h5.white-text 
-								|Ancestry
-							p.grey-text.text-lighten-4 
-								|genealogy is cool
-						.col.l4.offset-l2
-							h5.white-text 
-								|Links
-							ul
-								li: a.grey-text.text-lighten-3(href='./login') login
-								li: a.grey-text.text-lighten-3(href='./profile') profile
-				.footer-copyright
-					.container
-						|© 2015 Horns and Hoofs
-						a.grey-text.text-lighten-4.right(href='https://github.com/aovchinn/ancestry')
-							i.fa.fa-github-alt.fa-lg
+  head
+    title= title
+    link(rel='stylesheet', href='/Materialize/dist/css/materialize.css')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    
+body
+  nav
+    .nav-wrapper.teal.lighten-2
+      a.brand-logo(href="/") Ancestry
+  block content
+  footer.page-footer.teal.lighten-2
+    .container
+      .row
+        .col.l6.s12
+          h5.white-text Ancestry
+  script(src='/jquery/dist/jquery.js')
+  script(src='/Materialize/dist/js/materialize.js')
