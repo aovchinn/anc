@@ -10,10 +10,8 @@
     "rebuild": "npm stop && npm run docker:clean && npm run docker:build",
     "start": "docker-compose up -d db anc",
     "stop": "docker-compose stop",
-    "bower:install": "docker-compose run --rm anc /opt/node_modules/.bin/bower -q -s --save --allow-root install",
-    "cucumber": "docker-compose run --rm cucumber",
-    "bash": "docker-compose run --rm /bin/bash",
-    "restart": "docker-compose restart anc"
+    "bower:install": "docker-compose run --rm anc /opt/node_modules/.bin/bower -q --save --allow-root install",
+    "cucumber": "docker-compose run --rm cucumber"
   },
   "dependencies": {
     "bluebird": "^3.0.5",

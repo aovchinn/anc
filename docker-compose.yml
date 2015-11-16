@@ -7,7 +7,6 @@ anc:
   command: node bin/www
   volumes:
     - .:/opt/app
-    - /opt/app/node_modules
   ports:
     - "3000:3000"
   links:
