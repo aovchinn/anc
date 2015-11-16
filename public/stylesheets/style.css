@@ -6,6 +6,10 @@ body {
 main {
   flex: 1 0 auto;
 }
+.offset-s8.old-tree{
+    float: left;
+    background-image: url(/images/roots-of-big-old-tree.jpg);
+}
 .row.wrapper {
   margin-bottom: 0;
 }
@@ -14,9 +18,6 @@ a.brand-logo {
 }
 form {
   margin-top: 10%;
-}
-.col.s8.old-tree {
-  padding-left: 0;
 }
 .old-tree > img {
   width: 100%;
