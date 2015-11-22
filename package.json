@@ -41,7 +41,8 @@
     "zombie": "^4.2.1"
   },
   "devDependencies": {
-    "gulp-browserify": "^0.5.1",
-    "gulp-riot": "^0.4.1"
+    "browserify": "^12.0.1",
+    "riotify": "^0.1.2",
+    "vinyl-source-stream": "^1.1.0"
   }
 }
