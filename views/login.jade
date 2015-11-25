@@ -2,20 +2,6 @@ extends layout
 
 block content
 	.row.wrapper
-		.offset-s8.old-tree
-			|asdasd//- img(src='/images/roots-of-big-old-tree.jpg')
-		form.col.s4
-			.row
-				.input-field.col.s10.offset-s1
-					input#email(type='email')
-					label(for='email') Email
-			.row
-				.input-field.col.s10.offset-s1
-					input#password(type='password')
-					label(for='password') Password
-			.row
-				.input-field.col.s5.offset-s1
-					.waves-effect.waves-light.btn Submit
-				.input-field.col.s5
-					input#test5(type='checkbox')
-					label(for='test5') Remember me
+		.col.s8.old-tree
+		login-form.col.s4
+		script(src='/js/riot/login.js')
