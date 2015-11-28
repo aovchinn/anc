@@ -3,9 +3,7 @@ Ancestry is a web application for creating family tree.
 
 #### Building
 ```sh
-npm run rebuild
-npm install
-gulp riot
+npm run rebuild:all
 ```
 
 #### Running
@@ -13,7 +11,7 @@ gulp riot
 npm run start
 ```
 
+#### Build and run tests
 ```sh
-
-# Build and run tests with CucumberJS ?
 npm run test
+```
