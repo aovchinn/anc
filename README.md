@@ -10,9 +10,6 @@ gulp riot
 
 #### Running
 ```sh
-npm run rebuild
-npm install
-gulp riot
 npm run start
 ```
 
