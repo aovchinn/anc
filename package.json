@@ -14,7 +14,8 @@
     "cucumber": "docker-compose run --rm cucumber",
     "bash": "docker-compose run --rm anc /bin/bash",
     "restart": "docker-compose restart anc",
-    "gulp": "docker-compose run --rm anc /opt/node_modules/.bin/gulp"
+    "gulp": "docker-compose run --rm anc /opt/node_modules/.bin/gulp riot",
+    "rebuild:all" : "npm run rebuild && npm run bower:install && npm run gulp"
   },
   "dependencies": {
     "bluebird": "^3.0.5",
