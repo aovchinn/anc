@@ -11,7 +11,7 @@
         </div>
         <div class="row">
             <div class="input-field col s10 offset-s1">
-                <input id="password" type="password" name="password" onBlur={ setPassword }/>
+                <input id="password" type="password" name="password" onblur={ setPassword }/>
                 <label for="password">Password</label>
             </div>
         </div>
