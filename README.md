@@ -15,3 +15,8 @@ npm run start
 ```sh
 npm run test
 ```
+
+####  Programming language
+```sh
+JavaScript, HTML5, CSS
+```
