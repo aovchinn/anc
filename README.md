@@ -21,6 +21,11 @@ npm run test
 JavaScript, HTML5, CSS
 ```
 
+#### Language
+```sh
+English
+```
+
 ####  Author
 ```sh
 Ovchinnikov Alexander
