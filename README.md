@@ -20,3 +20,11 @@ npm run test
 ```sh
 JavaScript, HTML5, CSS
 ```
+
+####  Author
+```sh
+Ovchinnikov Alexander
+Klyuchnikov Maxim
+Dyatlova Alexandra
+Mamontov Anton
+```
